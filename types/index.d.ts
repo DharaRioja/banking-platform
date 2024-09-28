@@ -27,7 +27,7 @@ declare type SearchParamProps = {
   
   declare type User = {
     // $id: string;
-    // email: string;
+    email: string;
     // userId: string;
     // dwollaCustomerUrl: string;
     // dwollaCustomerId: string;
@@ -50,17 +50,17 @@ declare type SearchParamProps = {
   };
   
   declare type Account = {
-    id: string;
-    availableBalance: number;
+    // id: string;
+    // availableBalance: number;
     currentBalance: number;
-    officialName: string;
-    mask: string;
-    institutionId: string;
+    // officialName: string;
+    // mask: string;
+    // institutionId: string;
     name: string;
-    type: string;
-    subtype: string;
-    appwriteItemId: string;
-    shareableId: string;
+    // type: string;
+    // subtype: string;
+    // appwriteItemId: string;
+    // shareableId: string;
   };
   
   declare type Transaction = {
@@ -84,12 +84,12 @@ declare type SearchParamProps = {
   
   declare type Bank = {
     $id: string;
-    accountId: string;
-    bankId: string;
-    accessToken: string;
-    fundingSourceUrl: string;
-    userId: string;
-    shareableId: string;
+    // accountId: string;
+    // bankId: string;
+    // accessToken: string;
+    // fundingSourceUrl: string;
+    // userId: string;
+    // shareableId: string;
   };
   
   declare type AccountTypes =
