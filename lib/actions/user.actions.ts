@@ -1,4 +1,4 @@
-'user server'
+'use server'
 
 import { ID, Query } from "node-appwrite";
 import { createAdminClient, createSessionClient } from "../appwrite"
@@ -49,9 +49,8 @@ export const signIn = async ({ email, password }: signInProps) => {
 
 export const signUp = async ({ password, ...userData }: SignUpParams) => {
     const { email, firstName, lastName } = userData;
-    
-    let newUserAccount;
-  
+    let newUserAccount
+
     try {
       const { account, database } = await createAdminClient();
   
@@ -112,4 +111,15 @@ export async function getLoggedInUser() {
       console.log(error)
       return null;
     }
+}
+
+export const logoutAccount = async () => {
+  try {
+    const { account } = await createSessionClient()
+
+    cookies().delete('appwrite-session')
+    await account.deleteSession('current')
+  } catch (error) {
+    return null;
+  }
 }
